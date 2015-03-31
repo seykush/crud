@@ -5,7 +5,7 @@
     $username = mysql_real_escape_string($_POST['username']);
     $password_hash = mysql_real_escape_string($_POST['password']);
     $password = hash('ripemd160', $password_hash);
-    $bool = true;
+
 
     $result = $conn->query("Select * from users WHERE username='$username'");
     $row_cnt = $result->num_rows; 
