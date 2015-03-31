@@ -9,6 +9,15 @@ $result = $conn->query($sql);
     <head>
         <title>Staff Members</title>
     </head>
+    <?php
+    session_start();
+    if($_SESSION['user']){
+        
+    } else{
+        header("location:http://localhost/crud/auth/register.php");
+    }
+    $user = $_SESSION['user'];
+    ?>   
     <body>
         <h1><a href="create1.php">Add staff</a></h1>
         <table border="1" width="100%">
